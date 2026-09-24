@@ -1,7 +1,4 @@
 
-    
-
-
     function getComputerChoice(){
 
     let randomnumber = Math.floor(Math.random() * 3) + 1;
@@ -19,7 +16,7 @@
         return "scissors";
     } 
 
-    console.log(getComputerChoice);
+    
 }
 
 function getHumanChoice(){
@@ -29,7 +26,7 @@ function getHumanChoice(){
 
     return choice;
 }
-console.log("human choice:", getHumanChoice());
+
 
 
 function playGame() {
