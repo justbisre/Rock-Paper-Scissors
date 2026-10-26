@@ -62,9 +62,7 @@ function playGame() {
      let computerscore = 0;*/
 
       function playRound(playerselection , computerselection) {
-   /* let humanselection = (humanchoice.toUpperCase());*/
-   /* let computerselection = computerchoice;*/
-
+  
     if (playerselection === computerselection) {
         
          /*console.log("its a tie" + humanselection);*/
