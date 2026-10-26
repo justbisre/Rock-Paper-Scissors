@@ -2,7 +2,7 @@
   let computerScore = 0;
    const roundResult = document.querySelector("#round-result");
    const scoreDisplay = document.querySelector("#score");
-   const rockBtn = document.querySelector("#rocck");
+   const rockBtn = document.querySelector("#rock");
    const paperBtn = document.querySelector("#paper");
    const scissorsBtn = document.querySelector("#scissor");
 
@@ -15,7 +15,7 @@
    })
 
    scissorsBtn.addEventListener("click" , function(){
-    playRound("scissors", getComputerChoice());
+    playRound("scissor", getComputerChoice());
    });
 
 
@@ -24,9 +24,9 @@
     function getComputerChoice(){
 
    
-   const choice = ["rock", "paper", "scissors"];
+   const choice = ["rock", "paper", "scissor"];
    const randomIndex = Math.floor(Math.random() * choice.length);
-   return choices[randomIndex];
+   return choice[randomIndex];
 
     /*let randomnumber = Math.floor(Math.random() * 3) + 1;
     
@@ -63,32 +63,32 @@ function playGame() {
 
       function playRound(playerselection , computerselection) {
    /* let humanselection = (humanchoice.toUpperCase());*/
-    let computerselection = computerchoice;
+   /* let computerselection = computerchoice;*/
 
     if (playerselection === computerselection) {
         
          /*console.log("its a tie" + humanselection);*/
 
-         roundResult.textContent = "It's a tie! ${playerselection}.";
+         roundResult.textContent = `It's a tie! ${playerselection}.`;
    } else if (
-              (playerselection=== "rocck" && computerselection === "scissors") || 
+              (playerselection=== "rock" && computerselection === "scissors") || 
               (playerselection=== "paper" && computerselection === "rock") ||
-              (playerselection=== "scissors" && computerselection === "paper") 
+              (playerselection=== "scissor" && computerselection === "paper") 
             
         ){
             /*console.log("you win !" + humanselection + "beats" + computerselection);
             humanscore = humanscore + 1 ;*/
             playerScore++;
-            roundResult.textContent = "You win! ${playerselection} beats ${computerselection}";
+            roundResult.textContent = `You win! ${playerselection} beats ${computerselection}`;
         }
 
         else {
             /*console.log("you lose" + computerselection + "beats" + humanselection);
             computerscore = computerscore + 1 ;*/
             computerScore++;
-            roundResult.textContent = "you lose! ${computerselection} beats ${playerSelection}";
+            roundResult.textContent = `you lose! ${computerselection} beats ${playerSelection}`;
         }
-        scoreDisplay.textContent = "player: ${playerScore} | Computer: ${computerScore}";
+        scoreDisplay.textContent = `player: ${playerScore} | Computer: ${computerScore}`;
     }
    
 
